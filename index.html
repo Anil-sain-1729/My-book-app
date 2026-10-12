@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8a5a2b">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%238a5a2b'/%3E%3Cpath%20d='M32%2018c-6-4-14-4-20-2v30c6-2%2014-2%2020%202z'%20fill='%23fbf7f0'/%3E%3Cpath%20d='M32%2018c6-4%2014-4%2020-2v30c-6-2-14-2-20%202z'%20fill='%23f3eadb'/%3E%3Cpath%20d='M32%2018v30'%20stroke='%23c79a3f'%20stroke-width='3'/%3E%3Cpath%20d='M17%2025c4-1%208-1%2011%201M17%2031c4-1%208-1%2011%201M36%2026c3-2%207-2%2011-1M36%2032c3-2%207-2%2011-1'%20stroke='%23c79a3f'%20stroke-width='1.6'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%238a5a2b'/%3E%3Cpath%20d='M32%2018c-6-4-14-4-20-2v30c6-2%2014-2%2020%202z'%20fill='%23fbf7f0'/%3E%3Cpath%20d='M32%2018c6-4%2014-4%2020-2v30c-6-2-14-2-20%202z'%20fill='%23f3eadb'/%3E%3Cpath%20d='M32%2018v30'%20stroke='%23c79a3f'%20stroke-width='3'/%3E%3Cpath%20d='M17%2025c4-1%208-1%2011%201M17%2031c4-1%208-1%2011%201M36%2026c3-2%207-2%2011-1M36%2032c3-2%207-2%2011-1'%20stroke='%23c79a3f'%20stroke-width='1.6'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E">
+  
+<title>KitabGhar — Stories worth keeping</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="hd">
+<a class="logo" href="#home" id="siteName">KitabGhar</a>
+<nav id="nav"><a href="#home" data-i="home">Home</a><a href="#books" data-i="books">Books</a><a href="#about" data-i="about">About</a><a href="#contact" data-i="contact">Contact</a><a href="#orders" data-i="orders">My Orders</a><div id="navAcct"></div></nav>
+<div class="acw"><button class="ib" id="aBtn">Sign In</button><div class="am" id="aMenu"></div></div>
+<button class="ib" id="sBtn" aria-label="Search">🔍</button>
+<button class="ib" id="cBtn" aria-label="Cart">🛒<span class="badge" id="cBadge">0</span></button>
+<button class="ib" id="lBtn">हिंदी</button>
+<button class="ib" id="tBtn" aria-label="Theme">🌙</button>
+<button class="ib" id="burger">☰</button>
+</div>
+<div id="sbar"><input id="q" data-p="search" placeholder="Search books, authors, stories..."></div></div></header>
+
+<main>
+<div class="view on" id="v-home">
+<div class="hero" id="hero">
+<!-- HERO IMAGE 1 --><!-- HERO IMAGE 2 --><!-- HERO IMAGE 3 --><!-- HERO IMAGE 4 --><!-- HERO IMAGE 5 --><!-- HERO IMAGE 6 -->
+<div id="slides"></div>
+<div class="hc"><div class="wrap"><h1 id="hH"></h1><p id="hD"></p><a class="btn" href="#books" data-i="explore">Explore Books</a></div></div>
+<button class="arr" id="prev" aria-label="Previous">‹</button><button class="arr" id="next" aria-label="Next">›</button>
+<div class="dots" id="dots"></div><div class="cnt" id="cnt"></div>
+</div>
+<section id="books"><div class="wrap">
+<h2 data-i="browse">Browse Books</h2><p class="sub" data-i="browseSub">Free reads and paid editions, all in one place.</p>
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="grid"><p>Loading Books...</p></div>
+</div></section>
+<section class="alt" id="soon"><div class="wrap"><h2 data-i="soon">Coming Soon</h2><p class="sub" data-i="soonSub">Stories on their way to your shelf.</p><div class="grid" id="soonGrid"></div></div></section>
+<section id="about"><div class="wrap two"><div class="av" id="auImg">✍️</div><div><h2 id="auName"></h2><p class="sub" data-i="author">About the Author</p><p id="auBio"></p></div></div></section>
+<section class="alt"><div class="wrap"><h2 data-i="reviews">Reader Reviews</h2><p class="sub" data-i="reviewsSub">What readers are saying.</p><div class="grid" id="rvGrid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div></div></section>
+<section id="contact"><div class="wrap two"><div><h2 data-i="contactT">Write to us</h2><p class="sub" data-i="contactSub">Questions, feedback or a book request? We read every message.</p><p>✉ <span id="cEmail"></span><br>☎ <span id="cPhone"></span></p></div>
+<div><input id="cn" data-p="name" placeholder="Name"><input id="ce" type="email" data-p="email" placeholder="Email"><input id="cp" data-p="phone" placeholder="Phone"><textarea id="cm" rows="4" data-p="message" placeholder="Message"></textarea><button class="btn" id="cSend" data-i="send">Send Message</button></div></div></section>
+</div>
+
+<div class="view" id="v-orders"><section><div class="wrap"><h2 data-i="orders">My Orders</h2><p class="sub">Your orders and payment status.</p><div id="ordList"></div></div></section></div>
+<div class="view" id="v-profile"><section><div class="wrap"><h2>My Profile</h2><div id="profWrap"></div><h2 style="margin-top:36px">My Books</h2><p class="sub">Books from your verified (paid) orders.</p><div id="myBooks"></div></div></section></div>
+</main>
+
+<footer><div class="wrap"><div class="fg">
+<div><div class="logo" style="font-size:1.5rem" id="fName">KitabGhar</div><p id="fText" style="opacity:.8;max-width:340px"></p><p style="margin-top:8px">✉ <span id="fMail"></span></p></div>
+<div><b>Links</b><br><a href="#home">Home</a><br><a href="#books">Books</a><br><a href="#about">About</a><br><a href="#contact">Contact</a></div>
+<div><b>Follow</b><br><a id="sIg" target="_blank">Instagram</a><br><a id="sFb" target="_blank">Facebook</a><br><a id="sYt" target="_blank">YouTube</a></div></div>
+<div class="fb"><span>Visitors: <b id="vis">—</b></span><span>© 2026 KitabGhar <a href="#" id="adminLink">⚙ Admin</a></span></div></div></footer>
+
+<div class="ov" id="ov"><div class="md"><button class="x" id="ovX">×</button><div id="ovB"></div></div></div>
+<div class="toast" id="toast"></div>
+<div id="admin"></div>
+
+<div id="welcome"><div class="wl"><div class="fl">
+<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=70" alt=""><img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=70" alt=""><img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=70" alt=""><img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=70" alt=""></div>
+<div class="wt"><h1>Every story finds its reader.</h1><p>Sign in to read free books, buy new releases, and keep every order and download in one place.</p>
+<ul><li>📚 Free books, always open</li><li>🔒 Secure downloads after payment</li><li>🧾 Track every order</li></ul></div></div>
+<div class="wr"><div class="wcard"><div class="logo">KitabGhar</div><div id="wcForm"></div><button class="btn ghost" id="wGuest" style="width:100%;margin-top:14px">Continue as guest →</button></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>         
